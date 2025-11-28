@@ -1,0 +1,308 @@
+@charset "UTF-8";
+
+/* ========== RESET GERAL ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: justify;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== MENU SUPERIOR ========== */
+.menu {
+  width: 100%;
+  height: 70px;
+  background-color: #11228d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu ul {
+  list-style-type: none;
+  display: flex;
+  column-gap: 2rem;
+}
+
+.menu li {
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu li:hover {
+  background-color: #3889f3;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  column-gap: 0.5rem;
+}
+
+/* ========== CONTEÚDO PRINCIPAL ========== */
+.conteudo {
+  margin-top: 80px;
+  width: 80%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  background-color: #ffffff;
+  color: #111;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+/* TÍTULOS E TEXTOS */
+.conteudo h2 {
+  text-align: center;
+  color: #0b0f41;
+  margin-bottom: 30px;
+}
+
+.conteudo p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.conteudo h4 {
+  color: rgb(142, 0, 0);
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* ========== BOTÃO ENVIAR ========== */
+.enviar-btn {
+  margin-top: 40px;
+  width: 40%;
+  padding: 15px;
+  background: #11228d;
+  border: none;
+  outline: none;
+  border-radius: 35px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.enviar-btn:hover {
+  background: rgba(17, 39, 183, 0.8);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.enviar-btn,
+.enviar-btn a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+/* ========== CONTAINER GERAL ========== */
+.orientacoes {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ========== BOTÕES DE ORIENTAÇÃO ========== */
+.titulo-orientacoes {
+  width: 80%;
+  max-width: 800px;
+  background-color: #11228d;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.titulo-orientacoes:hover {
+  background-color: #3347d6;
+  transform: translateY(-2px);
+}
+
+/* CONTEÚDO OCULTO */
+.orientacoes .conteudo {
+  width: 80%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #111;
+  text-align: justify;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding: 0 40px;
+  transition: all 0.6s ease;
+  margin-top: -10px;
+}
+
+/* CONTEÚDO QUANDO ATIVO */
+.orientacoes .conteudo.ativo {
+  max-height: 1000px;
+  opacity: 1;
+  padding: 30px 40px;
+  margin-bottom: 30px;
+}
+
+/* TEXTOS INTERNOS */
+.orientacoes .conteudo h2 {
+  text-align: center;
+  color: #0b0f41;
+  margin-bottom: 20px;
+}
+
+.orientacoes .conteudo p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.orientacoes .conteudo h4 {
+  color: rgb(142, 0, 0);
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+/* Telas até 1024px (notebooks e tablets grandes) */
+@media (max-width: 1024px) {
+  .conteudo {
+    width: 90%;
+    padding: 40px 30px;
+  }
+
+  .titulo-orientacoes,
+  .orientacoes .conteudo {
+    width: 90%;
+  }
+}
+
+/* Telas até 768px (tablets e celulares em paisagem) */
+@media (max-width: 768px) {
+  .menu {
+    height: auto;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu li {
+    padding: 8px 16px;
+  }
+
+  .conteudo {
+    width: 90%;
+    padding: 30px 20px;
+    margin-top: 100px;
+  }
+
+  .conteudo h2 {
+    font-size: 1.4em;
+  }
+
+  .conteudo p {
+    font-size: 15px;
+  }
+
+  .enviar-btn {
+    width: 80%;
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .titulo-orientacoes {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .orientacoes .conteudo {
+    padding: 20px;
+  }
+}
+
+/* Telas até 480px (celulares) */
+@media (max-width: 480px) {
+  .menu {
+    font-size: 14px;
+  }
+
+  .conteudo {
+    width: 95%;
+    padding: 25px 15px;
+  }
+
+  .conteudo h2 {
+    font-size: 1.2em;
+  }
+
+  .conteudo p {
+    font-size: 14px;
+  }
+
+  .enviar-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .titulo-orientacoes {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  .orientacoes .conteudo {
+    width: 95%;
+    padding: 15px;
+  }
+}

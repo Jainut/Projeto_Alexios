@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="cadastroJS.js"></script>
+</head>
+<body onload="limparCampos()">
+    <div class="glass-counteiner">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/SENAI_logo_2024.png" alt="Logo SENAI">
+        <h2>Cadastro</h2>
+    <form id="cadastroForm">
+            <div class="input-group">
+                <input type="text" id="matricula" placeholder=" " required>
+                <label>Matrícula</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="senha" placeholder=" " required>
+                <label>Senha</label>
+            </div>
+            <p id="respostaServidor" class="respostaServidor"></p>
+            <button type="submit" class="cadastro-btn" id="botaoEnviar">Cadastrar</button>
+            <br>
+        </form>
+        <button type="submit" class="voltarLogin" id="voltarLogin" onclick="voltarLogin()">Cancelar</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atestado</title>
+
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="guia.html" class="nav-link">
+          <span class="item-icon"><i class='bx bx-help-circle'></i></span>
+          <span class="item-txt">Mais informações</span>
+        </a>
+      </li>
+      <li>
+        <a href="index.html" class="nav-link">
+          <span class="item-icon"><i class='bx bx-folder-up-arrow'></i></span>
+          <span class="item-txt">Enviar atestado</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <br><br>
+
+  <div class="orientacoes">
+
+  <!-- BOTÃO 1 -->
+  <div class="titulo-orientacoes">Orientações envio de atestados</div>
+  <div class="conteudo">
+    <h2>📲 Orientações para Envio de Atestado Médico – SENAI Centro 4.0</h2>
+
+    <p>
+      Para realizar o envio do seu atestado médico, acesse o campo destinado a essa finalidade e preencha todas as informações solicitadas com atenção.
+      Comece informando seu <strong>nome completo</strong> e, em seguida, selecione o <strong>código correto da sua turma</strong>.
+    </p>
+
+    <p>
+      ⚠️ <strong>Atenção:</strong> o uso de um código incorreto invalida o cadastro do atestado.
+    </p>
+
+    <p>
+      Informe também a <strong>data de início do afastamento</strong> e o <strong>período total em dias</strong>.
+      Após isso, anexe o <strong>arquivo do atestado em formato PDF</strong>, garantindo que a imagem esteja bem iluminada e totalmente legível.
+    </p>
+
+    <p>Antes de enviar, <strong>confira todas as informações</strong> preenchidas.</p>
+    <p>⚠️ <strong>Dados incorretos ou ilegíveis anulam a validação do atestado.</strong></p>
+
+    <h4>► Envios incorretos não serão considerados. ◄</h4>
+  </div>
+
+  <br><br>
+
+  <!-- BOTÃO 2 -->
+  <div class="titulo-orientacoes">Converter imagem para PDF</div>
+  <div class="conteudo">
+    <h2>📲 Orientações para conversão de imagens para PDF</h2>
+
+    <p>
+      Para realizar a conversão de uma imagem para PDF, recomendamos acessar o site 
+      <a href="https://www.ilovepdf.com/pt/jpg_para_pdf" target="_blank">ILovePDF</a>,
+      uma plataforma gratuita para realizar a conversão.  
+      Comece escolhendo a imagem do seu <strong>atestado</strong> e, em seguida, selecione o botão 
+      <strong>Converter em PDF</strong>.
+    </p>
+
+    <p>
+      ⚠️ <strong>Atenção:</strong> envie apenas a imagem referente ao seu atestado.
+    </p>
+
+    <p>
+      Aguarde a conversão ser concluída e clique em <strong>Baixar PDF</strong>.  
+      Após isso, volte ao nosso sistema e vá até <strong>Enviar atestado</strong> para preencher o formulário de envio.
+    </p>
+
+    <p>⚠️ <strong>Dados incorretos ou ilegíveis anulam a validação do atestado.</strong></p>
+
+    <h4>► Envios incorretos não serão considerados. ◄</h4>
+  </div>
+
+  <br><br>
+
+  <!-- BOTÃO 3 -->
+  <div class="titulo-orientacoes">Entre em contato</div>
+  <div class="conteudo">
+    <h2>Dúvidas ou Problemas no Envio?</h2>
+
+    <p>Se você encontrou alguma dificuldade ao enviar o atestado ou deseja confirmar o recebimento, entre em contato com a coordenação pedagógica:</p>
+
+    <p><b>E-mail:</b> <a href="mailto:paula.beatriz@fiemg.com.br">paula.beatriz@fiemg.com.br</a></p>
+    <p><b>Telefone:</b> (31) 99122-1921</p>
+    <p><b>Horário de atendimento:</b> Segunda a sexta, das 9h às 21h</p>
+
+    <h4>📍 Caso o problema persista, compareça pessoalmente à coordenação pedagógica da escola com o atestado em mãos para regularizar sua situação.</h4>
+  </div>
+</div>
+
+
+<script>
+  // Seleciona todos os botões e conteúdos
+  const botoes = document.querySelectorAll('.titulo-orientacoes');
+  const conteudos = document.querySelectorAll('.orientacoes .conteudo');
+
+  // Inicialmente, tudo fechado
+  conteudos.forEach(c => c.classList.remove('ativo'));
+
+  botoes.forEach((botao, index) => {
+    botao.addEventListener('click', () => {
+      const conteudo = conteudos[index];
+
+      // Fecha os outros (se quiser abrir apenas um por vez)
+      conteudos.forEach((c, i) => {
+        if (i !== index) c.classList.remove('ativo');
+      });
+
+      // Alterna o conteúdo atual
+      conteudo.classList.toggle('ativo');
+    });
+  });
+</script>
+
+
+</body>
+</html>

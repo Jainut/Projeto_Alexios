@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="loginJS.js"></script>
+</head>
+<body onload="limparCampos()">
+  <div class="glass-counteiner">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/SENAI_logo_2024.png" alt="SENAI">
+    <h2>Login</h2>
+
+    <form id="loginForm">
+      <div class="input-group">
+        <input id="cpf" type="text" name="cpf" placeholder=" " required>
+        <label id=>CPF</label>
+      </div>
+
+      <div class="input-group">
+        <input id="senha" type="password" name="senha" placeholder=" " required>
+        <label>Senha</label>
+      </div>
+      <p id="respostaServidor" class="respostaServidor"></p>
+
+      <div class="remember-forgot">
+        <label>
+          <input id="lembrarSenha" type="checkbox"> Lembrar senha
+        </label>
+        <a href="page2.html">Esqueceu a senha?</a>
+      </div>
+
+      <button type="submit" class="login-btn" id="botaoEnviar">Login</button>
+      <br>
+
+      <div class="register-link">
+        <p>Não tem cadastro? <a href="file:///C:/Users/Aluno_Analytics.CENTRO40.000/Downloads/Projeto_Alexios/some_Codes/adminRegister/page3.html">Cadastre-se</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

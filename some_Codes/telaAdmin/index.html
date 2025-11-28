@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <!-- Define a codificação de caracteres para suportar acentos e caracteres especiais -->
+  <meta charset="utf-8"/>
+  <!-- Título da página que aparece na aba do navegador -->
+  <title>Lista de Arquivos</title>
+  <!-- Link para o arquivo de estilos CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Link para o arquivo JavaScript -->
+  <script src="jscript.js" defer></script>
+</head>
+<body>
+
+  <!-- Cabeçalho/Menu fixo no topo da página -->
+  <div class="menu">
+    <h1>Arquivos de Alunos</h1>
+  </div>
+
+  <!-- Área principal do conteúdo -->
+  <div class="conteudo">
+
+    <!-- Seção de estatísticas/contadores -->
+    <div class="stats" id="stats">
+      <span>Pendentes: 0</span>
+      <span>Validados: 0</span>
+      <span>Com Erro: 0</span>
+      <span>Inválidos: 0</span>
+    </div>
+
+    <!-- Barra de filtro e busca -->
+    <div class="filter-bar">
+      <!-- Campo de busca com placeholder e ícone de lupa -->
+      <input type="text" id="searchBox" placeholder="🔍 Buscar arquivo...">
+    </div>
+
+    <!-- Sistema de abas para filtrar por status -->
+    <div class="tabs">
+      <div class="tab active" data-tab="arquivos">Arquivos</div>
+      <div class="tab" data-tab="pendente">Pendentes</div>
+      <div class="tab" data-tab="validado">Validados</div>
+      <div class="tab" data-tab="erro">Com erro/incompleto</div>
+      <div class="tab" data-tab="invalido">Inválidos</div>
+    </div>
+
+    <!-- Elemento para mostrar status de carregamento/mensagens -->
+    <div id="status">Carregando...</div>
+
+    <!-- Cabeçalho da tabela de arquivos -->
+    <div class="header-row">
+      <span>Arquivos</span>
+      <span>Validado</span>
+      <span>Erro ou Incompleto</span>
+      <span>Inválido</span>
+    </div>
+
+    <!-- Lista onde os arquivos serão renderizados dinamicamente -->
+    <ul id="files"></ul>
+  </div>
+
+</body>
+</html>
